@@ -161,13 +161,6 @@
         "description": "The size of the virtual machines used when provisioning replica set nodes"
       }
     },
-    "zabbixServerIPAddress": {
-      "type": "string",
-      "defaultValue": "",
-      "metadata": {
-        "description": "The zabbix server IP which will monitor the mongodb nodes' mongodb status. Null means no zabbix server."
-      }
-    },
     "location": {
       "type": "string",
       "defaultValue": "[resourceGroup().location]",
