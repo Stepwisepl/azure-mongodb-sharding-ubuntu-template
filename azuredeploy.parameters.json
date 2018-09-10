@@ -37,9 +37,6 @@
     },
     "shardNodeVmSize": {
       "value": "Standard_DS1_v2"
-    },
-    "zabbixServerIPAddress": {
-	  "value": "Null"
-	}
+    }
   }
 }

@@ -14,6 +14,9 @@
     "mongoAdminPassword": {
       "type": "securestring"
     },
+    "templateBaseUrl": {
+      "type": "string"
+    },
     "namespace": {
       "type": "string"
     },
@@ -46,32 +49,6 @@
     "securityGroupName": "[concat(parameters('namespace'), parameters('vmbasename'), 'nsg')]"
   },
   "resources": [
-    {
-      "apiVersion": "2015-01-01",
-      "name": "diskSelection",
-      "type": "Microsoft.Resources/deployments",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-          "uri": "[concat(parameters('templateBaseUrl'), 'disksSelector', '.json')]",
-          "contentVersion": "1.0.0.0"
-        },
-        "parameters": {
-          "numDataDisks": {
-            "value": "[parameters('numDataDisks')]"
-          },
-          "diskStorageAccountName": {
-            "value": "[variables('storageAccountName')]"
-          },
-          "diskCaching": {
-            "value": "ReadWrite"
-          },
-          "diskSizeGB": {
-            "value": "[parameters('sizeOfDataDiskInGB')]"
-          }
-        }
-      }
-    },
     {
       "apiVersion": "2015-06-15",
       "type": "Microsoft.Network/networkSecurityGroups",
@@ -182,12 +159,13 @@
           "imageReference": "[parameters('osSettings').imageReference]",
           "osDisk": {
             "name": "osdisk",
-            "vhd": {
-              "uri": "[concat('http://', variables('storageAccountName'),'.blob.core.windows.net/vhds/', parameters('vmbasename'), '-osdisk.vhd')]"
-            },
             "caching": "ReadWrite",
-            "createOption": "FromImage"
-          }
+            "createOption": "FromImage",
+            "managedDisk": {
+              "storageAccountType": "StandardSSD_LRS"
+            },
+            "diskSizeGB": "40"
+          },
         },
         "networkProfile": {
           "networkInterfaces": [
