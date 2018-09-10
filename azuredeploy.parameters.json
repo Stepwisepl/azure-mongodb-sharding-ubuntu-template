@@ -1,0 +1,45 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "rgrebski"
+    },
+    "adminPassword": {
+      "value": "1qazXSW21qazXSW2"
+    },
+    "mongoAdminUsername": {
+      "value": "rgrebski"
+    },
+    "mongoAdminPassword": {
+      "value": "1qazXSW21qazXSW2"
+    },
+    "dnsNamePrefix": {
+      "value": "mongo-template-shard"
+    },
+    "environment": {
+      "value": "AzureCloud"
+    },
+    "numDataDisks": {
+      "value": "4"
+    },
+    "sizeOfDataDiskInGB": {
+      "value": 30
+    },
+    "ubuntuOSVersion": {
+        "value": "16.04.0-LTS"
+    },
+    "routerNodeVmSize": {
+      "value": "Standard_DS1_v2"
+    },
+    "configNodeVmSize": {
+      "value": "Standard_DS1_v2"
+    },
+    "shardNodeVmSize": {
+      "value": "Standard_DS1_v2"
+    },
+    "zabbixServerIPAddress": {
+	  "value": "Null"
+	}
+  }
+}
