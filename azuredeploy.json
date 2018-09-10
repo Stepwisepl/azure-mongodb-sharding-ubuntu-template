@@ -52,40 +52,6 @@
         "description": "Different environments in Azure. Choose AzureCloud for Global Azure, and choose AzureChinaCloud for Mooncake (Azure China Cloud)."
       }
     },
-    "numDataDisks": {
-      "type": "string",
-      "defaultValue": "4",
-      "allowedValues": [
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "32"
-      ],
-      "metadata": {
-        "description": "The number of data disks on each shard node. We will use Raid0 for the data disks to improve performance. On each shard."
-      }
-    },
-    "sizeOfDataDiskInGB": {
-      "type": "int",
-      "minValue": 1,
-      "maxValue": 1023,
-      "defaultValue": 30,
-      "metadata": {
-        "description": "The size of each data disk, the value is between 1 and 1023."
-      }
-    },
     "routerNodeVmSize": {
       "type": "string",
       "defaultValue": "Standard_DS1_v2",

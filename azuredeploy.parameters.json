@@ -20,9 +20,6 @@
     "environment": {
       "value": "AzureCloud"
     },
-    "numDataDisks": {
-      "value": "4"
-    },
     "sizeOfDataDiskInGB": {
       "value": 30
     },
