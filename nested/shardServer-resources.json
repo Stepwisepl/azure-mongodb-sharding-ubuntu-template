@@ -26,9 +26,6 @@
     "vmSize": {
       "type": "string"
     },
-    "zabbixServerIPAddress": {
-      "type": "string"
-    },
     "subnet": {
       "type": "object"
     },
@@ -219,7 +216,7 @@
           "fileUris": "[parameters('osSettings').scripts]"
         },
         "protectedSettings": {
-          "commandToExecute": "[concat('bash shard_server.sh ', parameters('mongoAdminUsername'), ' ', parameters('mongoAdminPassword'), ' ', parameters('zabbixServerIPAddress'))]"
+          "commandToExecute": "[concat('bash shard_server.sh ', parameters('mongoAdminUsername'), ' ', parameters('mongoAdminPassword'))]"
         }
       }
     }

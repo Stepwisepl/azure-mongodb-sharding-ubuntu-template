@@ -322,9 +322,6 @@
           "staticIp": {
             "value": "[variables('networkSettings').statics.configSecondary1AndShard2Ip]"
           },
-          "zabbixServerIPAddress": {
-            "value": "[parameters('zabbixServerIPAddress')]"
-          },
           "osSettings": {
             "value": "[variables('configSecondaryOsSettings')]"
           }
@@ -372,9 +369,6 @@
           },
           "staticIp": {
             "value": "[variables('networkSettings').statics.configSecondary2AndShard3Ip]"
-          },
-          "zabbixServerIPAddress": {
-            "value": "[parameters('zabbixServerIPAddress')]"
           },
           "osSettings": {
             "value": "[variables('configSecondaryOsSettings')]"
@@ -424,9 +418,6 @@
           "vmSize": {
             "value": "[parameters('configNodeVmSize')]"
           },
-          "zabbixServerIPAddress": {
-            "value": "[parameters('zabbixServerIPAddress')]"
-          },
           "osSettings": {
             "value": "[variables('configPrimaryOsSettings')]"
           }
@@ -473,9 +464,6 @@
           },
           "staticIp": {
             "value": "[variables('networkSettings').statics.shard4Ip]"
-          },
-          "zabbixServerIPAddress": {
-            "value": "[parameters('zabbixServerIPAddress')]"
           },
           "osSettings": {
             "value": "[variables('shardOsSettings')]"
@@ -524,9 +512,6 @@
           "staticIp": {
             "value": "[variables('networkSettings').statics.shard5Ip]"
           },
-          "zabbixServerIPAddress": {
-            "value": "[parameters('zabbixServerIPAddress')]"
-          },
           "osSettings": {
             "value": "[variables('shardOsSettings')]"
           }
@@ -573,9 +558,6 @@
           },
           "staticIp": {
             "value": "[variables('networkSettings').statics.shard6Ip]"
-          },
-          "zabbixServerIPAddress": {
-            "value": "[parameters('zabbixServerIPAddress')]"
           },
           "osSettings": {
             "value": "[variables('shardOsSettings')]"
@@ -624,9 +606,6 @@
           "staticIp": {
             "value": "[variables('networkSettings').statics.shard7Ip]"
           },
-          "zabbixServerIPAddress": {
-            "value": "[parameters('zabbixServerIPAddress')]"
-          },
           "osSettings": {
             "value": "[variables('shardOsSettings')]"
           }
@@ -673,9 +652,6 @@
           },
           "staticIp": {
             "value": "[variables('networkSettings').statics.shard8Ip]"
-          },
-          "zabbixServerIPAddress": {
-            "value": "[parameters('zabbixServerIPAddress')]"
           },
           "osSettings": {
             "value": "[variables('shardOsSettings')]"
@@ -733,9 +709,6 @@
           },
           "staticIp": {
             "value": "[variables('networkSettings').statics.routerIp]"
-          },
-          "zabbixServerIPAddress": {
-            "value": "[parameters('zabbixServerIPAddress')]"
           },
           "osSettings": {
             "value": "[variables('routerOsSettings')]"

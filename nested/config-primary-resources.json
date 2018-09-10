@@ -29,9 +29,6 @@
     "subnet": {
       "type": "object"
     },
-    "zabbixServerIPAddress": {
-      "type": "string"
-    },
     "staticIp": {
       "type": "string"
     },
@@ -218,7 +215,7 @@
           "fileUris": "[parameters('osSettings').scripts]"
         },
         "protectedSettings": {
-          "commandToExecute": "[concat('bash config_primary.sh ',  parameters('mongoAdminUsername'), ' ', parameters('mongoAdminPassword'), ' ', parameters('zabbixServerIPAddress'))]"
+          "commandToExecute": "[concat('bash config_primary.sh ',  parameters('mongoAdminUsername'), ' ', parameters('mongoAdminPassword'))]"
         }
       }
     }
