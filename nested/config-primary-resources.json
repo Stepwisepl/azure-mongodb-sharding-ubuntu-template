@@ -14,9 +14,6 @@
     "mongoAdminPassword": {
       "type": "securestring"
     },
-    "templateBaseUrl": {
-      "type": "string"
-    },
     "namespace": {
       "type": "string"
     },
