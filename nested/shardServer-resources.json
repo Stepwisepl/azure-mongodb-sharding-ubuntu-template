@@ -50,6 +50,32 @@
   },
   "resources": [
     {
+      "apiVersion": "2015-01-01",
+      "name": "diskSelection",
+      "type": "Microsoft.Resources/deployments",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "[concat(parameters('templateBaseUrl'), 'disksSelector', '.json')]",
+          "contentVersion": "1.0.0.0"
+        },
+        "parameters": {
+          "numDataDisks": {
+            "value": "[parameters('numDataDisks')]"
+          },
+          "diskStorageAccountName": {
+            "value": "[variables('storageAccountName')]"
+          },
+          "diskCaching": {
+            "value": "ReadWrite"
+          },
+          "diskSizeGB": {
+            "value": "[parameters('sizeOfDataDiskInGB')]"
+          }
+        }
+      }
+    },
+    {
       "apiVersion": "2015-06-15",
       "type": "Microsoft.Network/networkSecurityGroups",
       "name": "[variables('securityGroupName')]",
