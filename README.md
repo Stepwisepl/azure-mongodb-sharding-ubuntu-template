@@ -16,7 +16,7 @@ The config server replica set stores sharding cluster metadata. MongoDB suggests
 
 The nodes are under the same subnet 10.0.0.0/24. Except the router server node (mongos), the other nodes only have private IP address.
 
-##Important Notice
+## Important Notice
 Each VM of the shard uses 40GB SSD drive.
 
 
@@ -61,7 +61,7 @@ Each VM of the shard uses 40GB SSD drive.
   Before adding your own replica set into the sharding cluster, you should enable internal authentication in your replica set first, and make sure the replica set is accessiable through this sharding cluster.
 
 
-##Known Limitations
+## Known Limitations
 - The MongoDB version is 3.6.
 - This cluster only has 8 shards (standalone, NOT replicas - not recommended for production use), you can add more shards after the deployment. 
 - The nodes use internal authentication. So if you want to add your own replica set into this sharding cluster, you should enable the internal authentication in your replica set first. Check any node /etc/mongokeyfile for more details.
